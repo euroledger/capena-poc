@@ -1,0 +1,84 @@
+version: '3'
+
+networks:
+  von_von:
+    external:
+      name: von_von
+
+services:
+  #
+  # Fronts
+  #
+  alice:
+    image: front-alice
+    build:
+      context: .
+      dockerfile: agent.dockerfile
+    command: /bin/bash -c './start.sh'
+    environment:
+      - ICON_SRC=https://img.icons8.com/nolan/256/user-credentials.png
+      - THEME=#008080
+      - PORT=3010
+      - NAME=Alice
+      - EMAIL=alice@faber.edu
+      - PASSWORD=123
+      - USERNAME=alice
+      - PUBLIC_DID_ENDPOINT=http://${HOST_IP_ADDRESS}:8031
+      - BLOCKCHAIN_LEDGER_ENDPOINT=http://${HOST_IP_ADDRESS}:9000
+      - TEST_POOL_IP=${TEST_POOL_IP}
+      - ICON_FRONT=/images/holder.png
+    volumes:
+     - ./:/home/front-agent/nodejs
+    ports:
+      - 3010:3010
+    networks:
+      von_von:
+
+  faber:
+    image: front-alice
+    command: /bin/bash -c './start.sh'
+    environment:
+      - ICON_SRC=https://cdn2.iconfinder.com/data/icons/bubble-education-icons-1/360/School-512.png
+      - THEME=#1e2336
+      - PORT=3011
+      - NAME=FABER
+      - EMAIL=admin@faber.com
+      - PASSWORD=123
+      - USERNAME=FABER
+      - PUBLIC_DID_ENDPOINT=http://${HOST_IP_ADDRESS}:8021
+      - BLOCKCHAIN_LEDGER_ENDPOINT=http://${HOST_IP_ADDRESS}:9000
+      - TEST_POOL_IP=${TEST_POOL_IP}
+      - ICON_FRONT=/images/issuer.png
+    volumes:
+      - ./:/home/front-agent/nodejs
+    ports:
+      - 3011:3011
+    depends_on:
+      - alice
+    networks:
+      von_von:
+
+  acme:
+    image: front-alice
+    command: /bin/bash -c './start.sh'
+    environment:
+      - ICON_SRC=https://i.ytimg.com/vi/JUMufld7UcY/maxresdefault.jpg
+      - THEME=#000080
+      - PORT=3012
+      - NAME=ACME
+      - EMAIL=admin@acme.com
+      - PASSWORD=123
+      - USERNAME=ACME
+      - PUBLIC_DID_ENDPOINT=http://${HOST_IP_ADDRESS}:8041
+      - BLOCKCHAIN_LEDGER_ENDPOINT=http://${HOST_IP_ADDRESS}:9000
+      - RUST_LOG=${RUST_LOG}
+      - TEST_POOL_IP=${TEST_POOL_IP}
+      - ICON_FRONT=/images/verifier.png
+    volumes:
+      - ./:/home/front-agent/nodejs
+    ports:
+      - 3012:3012
+    depends_on:
+      - alice
+    networks:
+      von_von:

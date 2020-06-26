@@ -1,0 +1,72 @@
+<div id="relationships" class="tab" style="display:none;" >
+    <button class="w3-right w3-btn w3-white w3-border" style="margin:15px 20px;" onclick="document.getElementById('newRelationshipModel').style.display='block'">Send New Connection Request</button>
+    <div class="w3-padding">
+        <div class="w3-third w3-border" style="width:33%; height:85vh; overflow:scroll;">
+            <%for(let relationship of relationships) {%>
+            <a onclick="showDiv('<%=relationship.their_did%>', 'relationshipsClass')">
+                <div class="w3-bar w3-btn w3-white w3-border" style="width:100%;">
+                    <svg class="w3-bar-item" width="70" height="70" data-jdenticon-value="<%=relationship.their_did%>"></svg>
+                    <p class="w3-bar-item"><%=relationship.their_label%></p>
+                </div>
+            </a>
+            <br>
+            <%}%>
+        </div>
+        <%for(let relationship of relationships) {%>
+            <div id="<%=relationship.their_did%>" class="w3-padding relationshipsClass" style="float:left;width:66%;margin-bottom: 100px;display:none;">
+                <div class="w3-border w3-container" style="margin:10px 50px;">
+                    <div class="w3-cell-middle" style="display: block;margin: auto;">
+                        <svg width="320" height="320" data-jdenticon-value="<%=relationship.their_did%>"></svg>
+                    </div>
+                    <div class="w3-cell" style="display: block;margin: auto;">
+                        <%if(relationship.their_label) {%>
+                        <p><b><%=relationship.their_label%></b>
+                            <!--<a class="w3-btn w3-white" onclick="startChat(<%=relationship.their_did%>)">-->
+                                <!--<i class="fa fa-comments fa-2x"></i>-->
+                            <!--</a>-->
+                        </p>
+                        <%}%>
+                        <div style="display:block;width:50%;margin:auto;">
+                            <fieldset>
+                                <legend class="" style="border:none;margin:10px;">Relationship Information</legend>
+                                <p>My Did: <%=relationship.my_did%></p>
+                                <p>Their Did: <%=relationship.their_did%></p>
+                                <p>Connection ID: <%=relationship.connection_id%></p>
+				<p>Invitation key: <%=relationship.invitation_key%></p>
+                                <p>Created AT: <%=relationship.created_at%></p>
+                            </fieldset>
+                        </div>  
+                        <p><b>Proofs:</b></p>
+                        <%for(let proof of proofsToBeValidated) {%>
+                                <div class="w3-bar w3-card">
+                                    <div class="w3-bar-item">
+                                        <p style="text-decoration: underline;"><%=proof.presentation_request.name%></p>
+                                        <p><b>Revealed Attributes:</b></p>
+                                        <%for(let attr of Object.keys(proof.presentation_request.requested_attributes)) {%>
+                                            <p><%=proof.presentation_request.requested_attributes[attr].name%>: <%= proof.presentation.requested_proof.revealed_attrs[attr].raw%></p>
+                                        <%}%>
+                                    </div>
+                                    <%if(proof.state === "presentation_received") {%>
+                                        <div class="w3-bar-item">
+                                            <button class="w3-btn w3-white w3-border" style="display:block;margin: 20px 20px;height: 100px;width:100px;" type="submit" onclick="validateProof(this.parentNode, <%=JSON.stringify(proof)%>)">Validate</button>
+                                        </div>
+                                    <%}%>
+                                    <%if(proof.state === "verified" && proof.verified === "true") {%>
+                                        <div class="w3-bar-item">
+                                            <i class="fa fa-check" style="color:green;font-size:120px;"></i>
+                                        </div>
+                                    <%}%>
+                                    <%if(proof.state === "verified" && proof.verified === "false") {%>
+                                        <div class="w3-bar-item">
+                                            <i class="fa fa-times" style="color:red;font-size:120px;"></i>
+                                        </div>
+                                    <%}%>
+                                </div>
+                                <br><br>
+                            <%}%>
+                    </div>
+                </div>
+            </div>
+        <%}%>
+    </div>
+</div>

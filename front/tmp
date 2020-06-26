@@ -1,0 +1,253 @@
+{
+    "trace": false,
+    "proof_request": {
+        "requested_predicates": {
+            "additionalProp1": {
+                "p_type": ">=",
+                "p_value": 0,
+                "name": "index",
+                "non_revoked": {
+                    "from": 1589493424,
+                    "to": 1589493424
+                },
+                "restrictions": [
+                    {
+                        "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "schema_name": "transcript",
+                        "issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "cred_def_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                        "schema_version": "1.0",
+                        "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0"
+                    }
+                ]
+            },
+            "additionalProp2": {
+                "p_type": ">=",
+                "p_value": 0,
+                "name": "index",
+                "non_revoked": {
+                    "from": 1589493424,
+                    "to": 1589493424
+                },
+                "restrictions": [
+                    {
+                        "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "schema_name": "transcript",
+                        "issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "cred_def_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                        "schema_version": "1.0",
+                        "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0"
+                    }
+                ]
+            },
+            "additionalProp3": {
+                "p_type": ">=",
+                "p_value": 0,
+                "name": "index",
+                "non_revoked": {
+                    "from": 1589493424,
+                    "to": 1589493424
+                },
+                "restrictions": [
+                    {
+                        "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "schema_name": "transcript",
+                        "issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "cred_def_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                        "schema_version": "1.0",
+                        "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0"
+                    }
+                ]
+            }
+        },
+        "requested_attributes": {
+            "additionalProp1": {
+                "name": "favouriteDrink",
+                "restrictions": [
+                    {
+                        "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "schema_name": "transcript",
+                        "issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "cred_def_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                        "schema_version": "1.0",
+                        "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0"
+                    }
+                ],
+                "non_revoked": {
+                    "from": 1589493424,
+                    "to": 1589493424
+                }
+            },
+            "additionalProp2": {
+                "name": "favouriteDrink",
+                "restrictions": [
+                    {
+                        "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "schema_name": "transcript",
+                        "issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "cred_def_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                        "schema_version": "1.0",
+                        "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0"
+                    }
+                ],
+                "non_revoked": {
+                    "from": 1589493424,
+                    "to": 1589493424
+                }
+            },
+            "additionalProp3": {
+                "name": "favouriteDrink",
+                "restrictions": [
+                    {
+                        "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "schema_name": "transcript",
+                        "issuer_did": "WgWxqztrNooG92RXvxSTWv",
+                        "cred_def_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                        "schema_version": "1.0",
+                        "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0"
+                    }
+                ],
+                "non_revoked": {
+                    "from": 1589493424,
+                    "to": 1589493424
+                }
+            }
+        },
+        "name": "Proof request",
+        "non_revoked": {
+            "from": 1589493424,
+            "to": 1589493424
+        },
+        "version": "1.0",
+        "nonce": "1234567890"
+    },
+    "connection_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "comment": "string"
+}
+
+
+
+
+{
+    'connection_id': '20b813ad-c9ef-4f27-bd68-e959508b2efa', 
+    'proof_request': {
+            'name': 'Proof of Education', 
+            'version': '1.0', 
+            'requested_attributes': {
+                    '0_name_uuid': {
+                            'name': 'name', 
+                            'restrictions': [
+                                    {'issuer_did': 'VLkCWViVeJoodfcxHv2D4L'}
+                            ]
+                    }, 
+                    '0_date_uuid': {'name': 'date', 'restrictions': [{'issuer_did': 'VLkCWViVeJoodfcxHv2D4L'}]}, 
+                    '0_degree_uuid': {'name': 'degree', 'restrictions': [{'issuer_did': 'VLkCWViVeJoodfcxHv2D4L'}]}
+            }, 
+            'requested_predicates': {
+                    '0_age_GE_uuid': {'name': 'age', 'p_type': '>=', 'p_value': 18, 'restrictions': [{'issuer_did': 'VLkCWViVeJoodfcxHv2D4L'}]}
+            }
+    }, 
+    'trace': False
+}
+
+
+{
+    "connection_id":"e2f64a9b-14ff-41f9-9930-91154347406b",
+    "trace":false,
+    "proof_request": {
+        "name": "Verification for insurance request",
+        "version": "1.0",
+        "requested_attributes": {
+            "0_brand_uuid": {
+            "name": "brand",
+            "restrictions": [
+                {
+                "issuer_did": "CxMD1upA5X85h3WaDfXsRj"
+                }
+            ]
+            },
+            "0_constructiondate_uuid": {
+            "name": "constructiondate",
+            "restrictions": [
+                {
+                "issuer_did": "CxMD1upA5X85h3WaDfXsRj"
+                }
+            ]
+            },
+            "0_electric_uuid": {
+            "name": "electric",
+            "restrictions": [
+                {
+                "issuer_did": "CxMD1upA5X85h3WaDfXsRj"
+                }
+            ]
+            }
+        },
+        "requested_predicates": {
+            "0_mileage_GE_uuid": {
+            "name": "mileage",
+            "p_type": "<=",
+            "p_value": 200000,
+            "restrictions": [
+                {
+                "issuer_did": "CxMD1upA5X85h3WaDfXsRj"
+                }
+            ]
+            }
+        }
+    }
+}
+
+
+credentials = await self.admin_GET(f"/present-proof/records/{presentation_exchange_id}/credentials"  )
+credentials [{'cred_info': {'referent': '4fdef69b-7bba-4f63-b5cf-7088b32762aa', 'attrs': {'degree': 'Maths', 'age': '24', 'date': '2018-05-28', 'timestamp': '1589557885', 'name': 'Alice Smith'}, 'schema_id': 'BMLsdsc57YWeH6tw4gLWts:2:degree schema:36.89.38', 'cred_def_id': 'BMLsdsc57YWeH6tw4gLWts:3:CL:191:default', 'rev_reg_id': None, 'cred_rev_id': None}, 'interval': None, 'presentation_referents': ['0_age_GE_uuid', '0_name_uuid', '0_date_uuid', '0_degree_uuid']}]
+
+request 
+    {
+        'requested_predicates': 
+            {
+                '0_age_GE_uuid': {'cred_id': '4fdef69b-7bba-4f63-b5cf-7088b32762aa'}
+            }, 
+        'requested_attributes': 
+            {
+                '0_name_uuid': {'cred_id': '4fdef69b-7bba-4f63-b5cf-7088b32762aa', 'revealed': True}, 
+                '0_date_uuid': {'cred_id': '4fdef69b-7bba-4f63-b5cf-7088b32762aa', 'revealed': True}, 
+                '0_degree_uuid': {'cred_id': '4fdef69b-7bba-4f63-b5cf-7088b32762aa', 'revealed': True}
+            }, 
+        'self_attested_attributes': {}
+    }
+"/present-proof/records/{presentation_exchange_id}/send-presentation"request
+
+
+
+The content of the generated prrof request:  
+{   
+    "requested_predicates": 
+        { "0_mileage_GE_uuid": 
+            { 
+                "cred_id": "769851f6-b324-4429-acd4-70215a8dcaeb",
+                "revealed": true 
+            } 
+        }
+    ,
+    "requested_attributes": 
+        { 
+            "0_brand_uuid": 
+            { 
+                "cred_id": "769851f6-b324-4429-acd4-70215a8dcaeb",
+                "revealed": true 
+            },
+            "0_constructiondate_uuid": 
+            { 
+                "cred_id": "769851f6-b324-4429-acd4-70215a8dcaeb",
+                "revealed": true 
+            },
+            "0_electric_uuid": 
+            { 
+                "cred_id": "769851f6-b324-4429-acd4-70215a8dcaeb",
+                "revealed": true 
+            } 
+        },
+    "self_attested_attributes": {} 
+}
+/send-presentation',//send-presentation',
